@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Notify slack when PR is ready for review
+      uses: jun3453/slack-pr-open-notification-action@v1.3.0
       env:
         SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK_URL }}
         PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
@@ -26,4 +27,3 @@ jobs:
         MAKE_PRETTY : true
         MAKE_COMPACT : true
         IS_PR_FROM_FORK: false
-      uses: jun3453/slack-pr-open-notification-action@v1.3.0
