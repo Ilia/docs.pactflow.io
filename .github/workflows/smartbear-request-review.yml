@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Request Review with Slack
-      uses: Ilia/request-review-action@v0.0.1
+      uses: Ilia/request-review-action@main
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
